@@ -4,6 +4,21 @@ app_publisher = "boq"
 app_description = "boq"
 app_email = "chai@gmail.com"
 app_license = "MIT"
+fixtures = ["Custom Field", "Custom Script", "Property Setter", "Custom DocPerm", "Custom DocType"]
+doc_events = {
+    "Bill of Quantities": {
+        "on_update": "boq.boq.doctype.bill_of_quantities.bill_of_quantities.update_total_amount"
+    },
+    "BOQ Item": {
+        "on_update": "boq.boq.doctype.boq_item.boq_item.update_parent_total"
+    },
+    "Sales Order": {
+        "after_insert": "boq.boq.doctype.bill_of_quantities.bill_of_quantities.copy_boq_reference_from_quotation"
+    }
+}
+
+
+
 
 # Includes in <head>
 # ------------------

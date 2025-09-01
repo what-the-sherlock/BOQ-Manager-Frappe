@@ -5,3 +5,17 @@
 tags
 boq/docs/current
 node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.DS_Store
+*.log
+*.swp
+*.swo
+*.idea/
+*.vscode/
+node_modules/
+*.egg-info/
+dist/
+*.sqlite3
+sites/
